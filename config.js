@@ -1,6 +1,4 @@
-// Se o PWA e a API estiverem no mesmo domínio/serviço, deixe vazio.
-// Se o frontend estiver em um Static Site separado, informe a URL HTTPS do backend, sem barra no final.
+// Se o frontend PWA estiver em um Static Site separado do backend, informe aqui a URL HTTPS da API.
 // Exemplo: API_BASE: "https://elevatta-api.onrender.com"
-window.ELEVATTA_CONFIG = {
-  API_BASE: ""
-};
+// Se frontend e API estiverem no mesmo domínio, mantenha vazio.
+window.ELEVATTA_CONFIG = { API_BASE: "" };

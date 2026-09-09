@@ -1,10 +1,11 @@
 {
-  "id": "./",
+  "id": "/",
   "name": "Elevatta - FVS e Medição",
   "short_name": "Elevatta FVS",
   "description": "Controle de qualidade, FVS, medição física e evidências de obra.",
   "lang": "pt-BR",
-  "start_url": "./",
+  "dir": "ltr",
+  "start_url": "./?source=pwa",
   "scope": "./",
   "display": "standalone",
   "display_override": [

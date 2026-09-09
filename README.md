@@ -1,56 +1,29 @@
-# Elevatta FVS + Medição — PWA 1.7.0
+# Elevatta FVS + Medição — Android/PWA 1.7.1
 
-Pacote pronto para GitHub + Render.
+Pacote corrigido para GitHub + Render, com todos os arquivos na raiz do repositório.
 
-## Estrutura correta do repositório
+## Upload no GitHub
 
-```text
-.
-├── .gitignore
-├── README.md
-├── render.yaml
-├── index.html
-├── config.js
-├── manifest.webmanifest
-├── pwa.js
-├── sw.js
-├── version.json
-└── icons/
-    ├── icon-192.png
-    ├── icon-512.png
-    ├── icon-maskable-512.png
-    ├── apple-touch-icon.png
-    └── favicon-32.png
-```
+1. Apague/substitua os arquivos antigos do repositório.
+2. Descompacte este ZIP.
+3. Envie **todos os arquivos da raiz e a pasta `icons/`**.
+4. Confirme o commit na branch `main`.
 
-## GitHub
+A raiz do Git deve mostrar `index.html`, `pwa.js`, `sw.js`, `manifest.webmanifest`, `render.yaml`, `config.js`, `version.json` e `icons/`.
 
-Descompacte este ZIP e envie **todo o conteúdo** para a raiz do repositório. Não crie uma pasta `public`.
+## Render
 
-## Render — configuração manual
+Use Static Site. Configuração:
 
-Crie um **Static Site** e use:
-
-- Branch: `main`
 - Root Directory: vazio
-- Build Command: `echo "Elevatta FVS PWA"`
+- Build Command: `echo "Elevatta FVS PWA Android 1.7.1"`
 - Publish Directory: `.`
-- Auto Deploy: `On Commit`
+- Auto Deploy: On Commit
 
-Ou use **New → Blueprint**, pois o `render.yaml` já está configurado para publicar a raiz do repositório.
+Depois do deploy, abra o endereço `https://...onrender.com` diretamente no **Google Chrome do Android**.
 
-## API
+O botão **Instalar app** permanece visível enquanto o PWA não estiver instalado.
 
-Se a API estiver em outro domínio, edite `config.js`:
+## Importante sobre API
 
-```js
-window.ELEVATTA_CONFIG = {
-  API_BASE: "https://SEU-BACKEND.onrender.com"
-};
-```
-
-Se frontend e API usam o mesmo domínio, mantenha `API_BASE` vazio.
-
-## Atualizações
-
-Nas versões futuras, substitua os arquivos no mesmo repositório e faça commit/push. O Render fará o deploy e o PWA instalado detectará a nova versão.
+Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defina `API_BASE` com a URL HTTPS do backend.
