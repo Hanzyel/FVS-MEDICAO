@@ -1,0 +1,52 @@
+ELEVATTA FVS + MEDIÇÃO — AUDITORIA PWA / ANDROID 1.7.4
+=========================================================
+
+STATUS: APROVADO PARA DEPLOY ESTÁTICO NO RENDER
+
+Validações executadas antes da entrega:
+[OK] index.html contém link único para /manifest.webmanifest
+[OK] manifest.webmanifest JSON válido
+[OK] name / short_name presentes
+[OK] start_url = /?source=pwa
+[OK] scope = /
+[OK] display = standalone
+[OK] prefer_related_applications = false
+[OK] ícone 192x192 existe e possui dimensão real 192x192
+[OK] ícone 512x512 existe e possui dimensão real 512x512
+[OK] ícone maskable 512x512 incluído
+[OK] Service Worker registrado em /sw.js com escopo /
+[OK] Service Worker possui handler fetch e cache offline do shell
+[OK] rotas /api/ não são interceptadas pelo cache
+[OK] botão Instalar app existe no HTML
+[OK] diálogo de instalação e botão Instalar agora existem
+[OK] beforeinstallprompt é capturado e armazenado
+[OK] appinstalled é tratado
+[OK] atualização via waiting Service Worker / SKIP_WAITING implementada
+[OK] pwa.js sem erro de sintaxe
+[OK] sw.js sem erro de sintaxe
+[OK] config.js sem erro de sintaxe
+[OK] todos os scripts inline do index.html sem erro de sintaxe
+[OK] quebra inválida do jsPDF corrigida
+[OK] render.yaml usa staticPublishPath: .
+[OK] versão de cache = 1.7.4
+
+IMPORTANTE — COMPORTAMENTO DO CHROME ANDROID
+O Chrome não é obrigado a liberar beforeinstallprompt imediatamente na primeira abertura.
+A promoção nativa depende também da heurística de engajamento do navegador. Por isso a
+versão 1.7.4 mantém o botão de instalação visível, mostra o estado da preparação e habilita
+"Instalar agora" assim que o Chrome dispara o evento nativo.
+
+Fluxo de teste após deploy:
+1. Abrir https://SEU-SITE.onrender.com diretamente no Google Chrome Android.
+2. Tocar na página ao menos uma vez.
+3. Manter a página aberta por aproximadamente 30 segundos na primeira visita.
+4. Tocar em "Instalar app".
+5. Quando o Chrome liberar o prompt, o botão muda para "Instalar agora".
+6. Alternativa do navegador: menu ⋮ > Instalar app / Adicionar à tela inicial.
+
+Observação:
+Não é possível validar o prompt nativo WebAPK do Android fora de uma origem HTTPS real e do
+Chrome do aparelho, porque esse passo é deliberadamente controlado pelo navegador. Todos os
+requisitos determinísticos do pacote foram validados antes do deploy.
+
+[OK] MEDIÇÃO 1.7.4: sem busca de histórico, sem anterior, sem acumulado no app/PDF/Excel.
