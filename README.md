@@ -1,4 +1,4 @@
-# Elevatta FVS + Medição — Android/PWA 1.7.4
+# Elevatta Medição + FVS — Android/PWA 1.7.5
 
 Pacote corrigido para GitHub + Render, com todos os arquivos na raiz do repositório.
 
@@ -16,7 +16,7 @@ A raiz do Git deve mostrar `index.html`, `pwa.js`, `sw.js`, `manifest.webmanifes
 Use Static Site. Configuração:
 
 - Root Directory: vazio
-- Build Command: `echo "Elevatta FVS PWA Android 1.7.4"`
+- Build Command: `echo "Elevatta FVS PWA Android 1.7.5"`
 - Publish Directory: `.`
 - Auto Deploy: On Commit
 
@@ -29,7 +29,7 @@ O botão **Instalar app** permanece visível enquanto o PWA não estiver instala
 Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defina `API_BASE` com a URL HTTPS do backend.
 
 
-## Novidades 1.7.4
+## Novidades 1.7.5
 - Botão Salvar fotos também no cabeçalho da câmera no Android.
 - Botão Zerar relatório fotográfico com confirmação.
 - A limpeza remove fotos, legendas, marcações, vínculos e capturas temporárias sem apagar FVS/medição.
@@ -43,8 +43,17 @@ Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defin
 - Alternativa: Chrome ⋮ → Instalar app / Adicionar à tela inicial.
 
 
-## Medição diária 1.7.4
+## Medição diária 1.7.5
 - A medição considera somente o serviço executado na data do registro.
 - Não busca medição anterior e não calcula acumulado.
 - App, PDF e Excel exibem apenas executado hoje, aprovado pela FVS e medido hoje.
 - Campos legados de anterior/acumulado são gravados como zero apenas para compatibilidade com a estrutura atual do banco.
+
+## Fluxo único 1.7.5
+
+- Não existe mais escolha entre “Somente FVS” e “FVS + Medição”.
+- Todo registro é obrigatoriamente **Medição + FVS**.
+- A medição continua exclusivamente diária, sem anterior ou acumulado.
+- É obrigatório adicionar pelo menos **1 foto** antes de registrar na base.
+- O botão de registro permanece bloqueado enquanto não houver evidência fotográfica.
+- Rascunhos antigos são normalizados automaticamente para o modo Medição + FVS.

@@ -1,4 +1,4 @@
-ELEVATTA FVS + MEDIÇÃO — AUDITORIA PWA / ANDROID 1.7.4
+ELEVATTA FVS + MEDIÇÃO — AUDITORIA PWA / ANDROID 1.7.5
 =========================================================
 
 STATUS: APROVADO PARA DEPLOY ESTÁTICO NO RENDER
@@ -28,12 +28,12 @@ Validações executadas antes da entrega:
 [OK] todos os scripts inline do index.html sem erro de sintaxe
 [OK] quebra inválida do jsPDF corrigida
 [OK] render.yaml usa staticPublishPath: .
-[OK] versão de cache = 1.7.4
+[OK] versão de cache = 1.7.5
 
 IMPORTANTE — COMPORTAMENTO DO CHROME ANDROID
 O Chrome não é obrigado a liberar beforeinstallprompt imediatamente na primeira abertura.
 A promoção nativa depende também da heurística de engajamento do navegador. Por isso a
-versão 1.7.4 mantém o botão de instalação visível, mostra o estado da preparação e habilita
+versão 1.7.5 mantém o botão de instalação visível, mostra o estado da preparação e habilita
 "Instalar agora" assim que o Chrome dispara o evento nativo.
 
 Fluxo de teste após deploy:
@@ -49,4 +49,6 @@ Não é possível validar o prompt nativo WebAPK do Android fora de uma origem H
 Chrome do aparelho, porque esse passo é deliberadamente controlado pelo navegador. Todos os
 requisitos determinísticos do pacote foram validados antes do deploy.
 
-[OK] MEDIÇÃO 1.7.4: sem busca de histórico, sem anterior, sem acumulado no app/PDF/Excel.
+[OK] MEDIÇÃO 1.7.5: sem busca de histórico, sem anterior, sem acumulado no app/PDF/Excel.
+
+APP FLOW 1.7.5: modo único MEDIÇÃO + FVS; evidência fotográfica obrigatória antes do registro.
