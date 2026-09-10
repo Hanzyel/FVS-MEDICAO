@@ -2,7 +2,7 @@ services:
   - type: web
     name: elevatta-fvs-medicao
     runtime: static
-    buildCommand: echo "Elevatta FVS PWA Android 1.7.8"
+    buildCommand: echo "Elevatta FVS PWA Android 1.7.10"
     staticPublishPath: .
     autoDeploy: true
     headers:
