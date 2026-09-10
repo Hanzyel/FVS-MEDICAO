@@ -1,4 +1,4 @@
-# Elevatta Medição + FVS — Android/PWA 1.7.7
+# Elevatta Medição + FVS — Android/PWA 1.7.8
 
 Pacote corrigido para GitHub + Render, com todos os arquivos na raiz do repositório.
 
@@ -16,7 +16,7 @@ A raiz do Git deve mostrar `index.html`, `pwa.js`, `sw.js`, `manifest.webmanifes
 Use Static Site. Configuração:
 
 - Root Directory: vazio
-- Build Command: `echo "Elevatta FVS PWA Android 1.7.7"`
+- Build Command: `echo "Elevatta FVS PWA Android 1.7.8"`
 - Publish Directory: `.`
 - Auto Deploy: On Commit
 
@@ -29,7 +29,7 @@ O botão **Instalar app** permanece visível enquanto o PWA não estiver instala
 Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defina `API_BASE` com a URL HTTPS do backend.
 
 
-## Novidades 1.7.7
+## Novidades 1.7.8
 - Botão Salvar fotos também no cabeçalho da câmera no Android.
 - Botão Zerar relatório fotográfico com confirmação.
 - A limpeza remove fotos, legendas, marcações, vínculos e capturas temporárias sem apagar FVS/medição.
@@ -43,13 +43,13 @@ Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defin
 - Alternativa: Chrome ⋮ → Instalar app / Adicionar à tela inicial.
 
 
-## Medição diária 1.7.7
+## Medição diária 1.7.8
 - A medição considera somente o serviço executado na data do registro.
 - Não busca medição anterior e não calcula acumulado.
 - App, PDF e Excel exibem apenas executado hoje, aprovado pela FVS e medido hoje.
 - Campos legados de anterior/acumulado são gravados como zero apenas para compatibilidade com a estrutura atual do banco.
 
-## Fluxo único 1.7.7
+## Fluxo único 1.7.8
 
 - Não existe mais escolha entre “Somente FVS” e “FVS + Medição”.
 - Todo registro é obrigatoriamente **Medição + FVS**.
@@ -59,12 +59,19 @@ Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defin
 - Rascunhos antigos são normalizados automaticamente para o modo Medição + FVS.
 
 
-## Persistência ao recarregar (1.7.7)
+## Persistência ao recarregar (1.7.8)
 - F5/recarregar preserva aba atual, etapa 1–5 e posição de rolagem.
 - O rascunho é salvo antes de a página ser descarregada/ocultada.
 - Iniciar uma nova medição continua levando para a etapa 1.
 
 
-## Novidade 1.7.7 — rastreabilidade da execução
+## Novidade 1.7.8 — rastreabilidade da execução
 
 A identificação da Medição + FVS agora registra **Quem executou o serviço** e **Tipo de mão de obra (Própria/Terceirizada)**. Os dados aparecem no resumo, histórico, PDF e Excel exportado. Para manter compatibilidade com bases antigas, a informação também é preservada em uma linha de rastreabilidade dentro do campo de observação do banco legado, sem exigir novas colunas.
+
+## Novidade 1.7.8 — Criar outro relatório
+- Botão **Criar outro relatório** no fechamento.
+- Exibe confirmação antes da limpeza.
+- Zera o relatório corrente: identificação, executor, tipo de mão de obra, medição, FVS, fotos, legendas, marcações e observações.
+- Descarta o rascunho/pendência local corrente.
+- **Não apaga registros já gravados no histórico/banco nem os cadastros.**
