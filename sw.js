@@ -1,4 +1,4 @@
-const CACHE_VERSION='1.7.5';
+const CACHE_VERSION='1.7.7';
 const CACHE_NAME='elevatta-fvs-shell-'+CACHE_VERSION;
 const SHELL=[
   '/','/index.html','/manifest.webmanifest','/config.js','/pwa.js','/version.json',
