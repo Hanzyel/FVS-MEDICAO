@@ -2,23 +2,38 @@ services:
   - type: web
     name: elevatta-fvs-medicao
     runtime: static
-    buildCommand: echo "Elevatta FVS PWA Android 1.7.10"
+    buildCommand: node scripts/check.mjs
     staticPublishPath: .
     autoDeploy: true
     headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: Permissions-Policy
+        value: "camera=(self), geolocation=(), microphone=(), payment=(), usb=()"
       - path: /sw.js
+        name: Cache-Control
+        value: "no-cache, no-store, must-revalidate"
+      - path: /
         name: Cache-Control
         value: "no-cache, no-store, must-revalidate"
       - path: /index.html
         name: Cache-Control
-        value: "no-cache, must-revalidate"
+        value: "no-cache, no-store, must-revalidate"
       - path: /version.json
         name: Cache-Control
         value: "no-cache, no-store, must-revalidate"
-      - path: /pwa.js
+      - path: /config.js
         name: Cache-Control
         value: "no-cache, must-revalidate"
-      - path: /config.js
+      - path: /pwa.js
         name: Cache-Control
         value: "no-cache, must-revalidate"
       - path: /manifest.webmanifest

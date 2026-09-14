@@ -1,0 +1,12 @@
+{
+  "name": "elevatta-fvs-medicao",
+  "version": "1.7.11",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

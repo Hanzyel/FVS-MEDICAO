@@ -1,11 +1,11 @@
 {
   "id": "/",
-  "name": "Elevatta - FVS e Medição",
+  "name": "Elevatta FVS + Medição",
   "short_name": "Elevatta FVS",
   "description": "Controle de qualidade, FVS, medição física e evidências de obra.",
   "lang": "pt-BR",
   "dir": "ltr",
-  "start_url": "/?source=pwa",
+  "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "display_override": [
@@ -13,8 +13,8 @@
     "minimal-ui"
   ],
   "orientation": "portrait-primary",
-  "background_color": "#f3f6fa",
-  "theme_color": "#17365f",
+  "background_color": "#F4F7FB",
+  "theme_color": "#17365F",
   "prefer_related_applications": false,
   "categories": [
     "business",

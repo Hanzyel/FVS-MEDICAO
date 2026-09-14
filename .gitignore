@@ -1,2 +1,12 @@
+# Sistema / IDE
 .DS_Store
 Thumbs.db
+
+# Node / validação
+node_modules/
+*.log
+
+# Variáveis locais / segredos
+.env
+.env.*
+!.env.example

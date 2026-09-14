@@ -1,4 +1,6 @@
-# Elevatta Medição + FVS — Android/PWA 1.7.10
+# Elevatta FVS + Medição
+
+**Versão FVS-MED-1.7.11**
 
 Pacote corrigido para GitHub + Render, com todos os arquivos na raiz do repositório.
 
@@ -16,7 +18,7 @@ A raiz do Git deve mostrar `index.html`, `pwa.js`, `sw.js`, `manifest.webmanifes
 Use Static Site. Configuração:
 
 - Root Directory: vazio
-- Build Command: `echo "Elevatta FVS PWA Android 1.7.10"`
+- Build Command: `node scripts/check.mjs`
 - Publish Directory: `.`
 - Auto Deploy: On Commit
 
@@ -28,6 +30,60 @@ O botão **Instalar app** permanece visível enquanto o PWA não estiver instala
 
 Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defina `API_BASE` com a URL HTTPS do backend.
 
+
+## Release 1.7.11 — estabilidade do PWA e deploy
+
+A 1.7.11 usa a 1.7.10 como base e preserva o fluxo operacional existente. Esta versão concentra mudanças em atualização do PWA, política de cache HTTP/Service Worker, headers de segurança e validação automática antes do deploy.
+
+### Teste local
+
+Na raiz do projeto, use um servidor HTTP local (não abra `index.html` por `file://`). Exemplos:
+
+```bash
+python -m http.server 8080
+```
+
+ou qualquer servidor estático equivalente. Depois abra `http://localhost:8080`.
+
+Para validar o release antes de publicar:
+
+```bash
+node scripts/check.mjs
+```
+
+### Política de versão
+
+- `version.json`, `index.html`, `pwa.js`, `sw.js` e `package.json` devem permanecer sincronizados.
+- `scripts/check.mjs` bloqueia o build quando detectar divergência.
+- Ao liberar uma nova versão, altere primeiro os identificadores de versão, execute o check e só então faça commit/deploy.
+
+### Funcionamento do PWA
+
+- HTML/configuração: Network First, com shell offline quando aplicável.
+- `/api`, `/api/*` e `/healthz`: somente rede, nunca cache.
+- `version.json` e `sw.js`: rede com `no-store`.
+- ícones: Cache First e cache HTTP longo.
+- um Service Worker novo fica em `waiting`; a ativação ocorre somente quando o usuário toca **Atualizar agora**.
+
+### Arquivos importantes
+
+- `index.html`: aplicação e regras operacionais existentes.
+- `config.js`: URL pública do backend, quando frontend/API estiverem separados.
+- `pwa.js`: instalação e atualização controlada do PWA.
+- `sw.js`: estratégias de cache e shell offline.
+- `version.json`: versão publicada consultada sem cache.
+- `render.yaml`: Static Site, headers HTTP e check de build.
+- `scripts/check.mjs`: validação automática do release.
+- `CHANGELOG_1_7_11.md`: alterações específicas desta versão.
+
+### Como liberar uma nova versão
+
+1. Atualize os identificadores de versão sincronizados.
+2. Execute `node scripts/check.mjs`.
+3. Teste o app localmente e os fluxos críticos.
+4. Faça commit/push para a branch do Render.
+5. O Render executará o check antes de publicar.
+6. No app já instalado, o usuário recebe o aviso de nova versão e escolhe quando atualizar.
 
 ## Novidades 1.7.10
 - Botão Salvar fotos também no cabeçalho da câmera no Android.

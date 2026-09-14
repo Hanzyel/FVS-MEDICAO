@@ -1,16 +1,25 @@
-ELEVATTA FVS + MEDIÇÃO — AUDITORIA 1.7.10
+ELEVATTA FVS + MEDIÇÃO — AUDITORIA DE RELEASE 1.7.11
 
-Status: OK para Git + Render
+Base funcional: 1.7.10
+Identificador: FVS-MED-1.7.11
 
-Validado:
-- index.html e scripts JavaScript sem erro de sintaxe
-- manifest.webmanifest válido
-- Service Worker versão 1.7.10
-- estrutura de raiz para Render (staticPublishPath: .)
-- controles de câmera Android: seleção de dispositivo/lente
-- zoom via MediaStreamTrack.getCapabilities/applyConstraints quando suportado
-- atalhos 0,5x / 1x / 2x / 3x / 5x exibidos somente quando disponíveis
-- fallback para aparelhos que não expõem zoom ao navegador
-- captura em lote e fila de fotos preservadas
+Validações do pacote:
+- Service Worker: cache versionado e atualização controlada
+- /api, /api/* e /healthz: somente rede, cache:no-store
+- navegação/index.html: Network First com fallback offline
+- config.js, pwa.js e manifest: Network First
+- version.json e sw.js: rede/no-store
+- icons/*: Cache First
+- limpeza de caches limitada a prefixos Elevatta
+- manifest PWA com id/start_url/scope em / e display standalone
+- ícones 192x192, 512x512 e maskable presentes
+- Render permanece Static Site (staticPublishPath: .)
+- buildCommand: node scripts/check.mjs
+- headers de segurança e Cache-Control revisados
+- sem CSP restritiva nesta versão
+- APP_VERSION/version.json/pwa.js/sw.js/package.json sincronizados
 
-Observação: câmeras 0,5x/tele podem ser expostas pelo Android como dispositivos separados. A disponibilidade e os nomes dependem do hardware e do Chrome do aparelho.
+A validação automática deve ser executada com:
+node scripts/check.mjs
+
+O release não altera regras de negócio, IDs/payloads/endpoints, IndexedDB, câmera, FVS, medição, fotos, PDF ou Excel da base 1.7.10.
