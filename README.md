@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição
 
-**Versão FVS-MED-1.7.11**
+**Versão FVS-MED-1.7.12**
 
 Pacote corrigido para GitHub + Render, com todos os arquivos na raiz do repositório.
 
@@ -30,6 +30,18 @@ O botão **Instalar app** permanece visível enquanto o PWA não estiver instala
 
 Se a API do Elevatta estiver em outro serviço Render, edite `config.js` e defina `API_BASE` com a URL HTTPS do backend.
 
+
+## Release 1.7.12 — catálogo Solaris terceirizado
+
+Esta versão adiciona uma regra de catálogo específica e centralizada para as obras da família Solaris (S1 a S5) quando o tipo de mão de obra é **Terceirizada**. O catálogo próprio atual e o comportamento das demais obras foram preservados.
+
+- Solaris + Própria: catálogo atual.
+- Solaris + Terceirizada: catálogo exclusivo de 15 etapas da empreitada, códigos `1`, `2`, `3`, `4`, `5a`, `5b`, `6` a `14`.
+- Pesos individuais preservados conforme fornecidos; total conceitual da empreitada = 100%.
+- Troca de tipo de mão de obra atualiza o catálogo imediatamente.
+- Seleções incompatíveis são limpas sem apagar fotos; fotos antes vinculadas a itens ficam como evidência geral.
+- Peso/código da etapa são preservados no rascunho e na rastreabilidade do registro sem alterar o schema do backend.
+- PDF e XLSX exibem código e peso da etapa para registros Solaris terceirizados.
 
 ## Release 1.7.11 — estabilidade do PWA e deploy
 
@@ -74,6 +86,8 @@ node scripts/check.mjs
 - `version.json`: versão publicada consultada sem cache.
 - `render.yaml`: Static Site, headers HTTP e check de build.
 - `scripts/check.mjs`: validação automática do release.
+- `CHANGELOG_1_7_12.md`: alterações funcionais do catálogo Solaris terceirizado.
+- `TEST_REPORT_1_7_12.md`: validações executadas na release 1.7.12.
 - `CHANGELOG_1_7_11.md`: alterações específicas desta versão.
 
 ### Como liberar uma nova versão

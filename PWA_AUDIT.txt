@@ -1,7 +1,7 @@
-ELEVATTA FVS + MEDIÇÃO — AUDITORIA DE RELEASE 1.7.11
+ELEVATTA FVS + MEDIÇÃO — AUDITORIA DE RELEASE 1.7.12
 
 Base funcional: 1.7.10
-Identificador: FVS-MED-1.7.11
+Identificador: FVS-MED-1.7.12
 
 Validações do pacote:
 - Service Worker: cache versionado e atualização controlada

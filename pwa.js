@@ -1,7 +1,7 @@
 (()=>{
   'use strict';
 
-  const LOCAL_VERSION = '1.7.11';
+  const LOCAL_VERSION = '1.7.12';
   const UPDATE_INTERVAL_MS = 15 * 60 * 1000;
   const $ = id => document.getElementById(id);
 

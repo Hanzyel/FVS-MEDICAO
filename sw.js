@@ -1,4 +1,4 @@
-const VERSION = '1.7.11';
+const VERSION = '1.7.12';
 const CACHE_NAME = `elevatta-fvs-med-${VERSION}`;
 const OWN_CACHE_PREFIXES = ['elevatta-fvs-med-', 'elevatta-fvs-shell-'];
 const INDEX_URL = '/index.html';
