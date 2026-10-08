@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição — Lótus e Solaris
 
-Versão 4.0.3. Pacote completo para GitHub e Render, com arquivos na raiz.
+Versão 4.0.4. Pacote completo para GitHub e Render, com arquivos na raiz.
 
 ## Atualizar o GitHub
 
@@ -36,7 +36,7 @@ Sem API disponível, o formulário, rascunhos, fotos e exportações funcionam n
 
 ## Validação
 
-Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_3.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
+Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_4.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
 
 ## Fotos e marcações
 
@@ -45,3 +45,7 @@ Na etapa Fotos, toque em **Câmera**, permita o acesso no Chrome e use **Tirar f
 Em cada imagem, toque em **Editar foto**. Escolha **Seta** ou **Círculo**, arraste sobre a foto e toque em **Salvar**. As marcações aparecem na galeria, no PDF e no Excel. O original é preservado e as marcações podem ser desfeitas.
 
 **Mover marcações:** depois de desenhar ou reabrir uma foto, escolha **Mover**, toque no círculo (borda ou centro) ou na seta e arraste. A seleção aparece com contorno azul. **Desfazer** reverte movimentos, desenhos, exclusões e limpeza. **Excluir marcação** remove apenas o elemento selecionado. No PC, as teclas de direção também permitem ajustar a posição. **Salvar** mantém as novas posições para a próxima abertura e para os relatórios.
+
+## Aprovar a medição
+
+Informe o **Executado neste período** digitando ou arrastando a barra. **Aprovar e medir** confirma o executado como aprovado e medido em um único toque. **Aprovar parcialmente** permite escolher um valor menor e confirmá-lo; **Deixar pendente** mantém o executado sem aprovação. O resumo mostra anterior, esta medição e acumulado. Se precisar registrar menos que o aprovado, abra **Medir um valor diferente do aprovado**. Aprovações nunca são preenchidas automaticamente ao apenas editar o executado. As validações e o histórico separado por serviço/frente continuam preservados.
