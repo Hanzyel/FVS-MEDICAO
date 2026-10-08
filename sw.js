@@ -1,4 +1,4 @@
-const VERSION = '4.0.1';
+const VERSION = '4.0.2';
 const CACHE_NAME = `elevatta-fvs-med-${VERSION}`;
 const OWN_CACHE_PREFIXES = ['elevatta-fvs-med-', 'elevatta-fvs-shell-'];
 const BASE_PATH = new URL(self.registration.scope).pathname;
