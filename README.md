@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição — Lótus e Solaris
 
-Versão 4.0.4. Pacote completo para GitHub e Render, com arquivos na raiz.
+Versão 4.0.5. Pacote completo para GitHub e Render, com arquivos na raiz.
 
 ## Atualizar o GitHub
 
@@ -14,11 +14,19 @@ Não envie somente o ZIP nem coloque os arquivos dentro de uma pasta adicional n
 ## Conteúdo
 
 - Escolha de Lótus 2 e Solaris 1 a 6 no mesmo app.
-- Lótus: 158 serviços do orçamento; Solaris: 28 serviços do contrato DIFELIX para cada obra.
+- Lótus: 158 serviços do orçamento; Solaris: 75 serviços em 7 etapas do contrato 23 DIFELIX para cada obra.
 - Campos dependentes em sequência lógica e FVS do serviço escolhido.
 - PDF com logo e fundo branco, resumo, checklist e fotos; exportação Excel.
 - Layout móvel, fotos comprimidas, rascunhos locais e instalação como aplicativo.
 - Manifesto, ícones, atualização controlada, cache offline e validação do pacote.
+
+## Serviços dos Solaris
+
+Solaris 1 a 6 usam os 75 itens do arquivo `Contrato Analítico - 23 - DIFELIX EMPREITEIRA LTDA.xlsx`, aba `Contrato Analítico`, gerado em 08/10/2026. A planilha identifica Solaris Village IV; por solicitação do usuário, o mesmo escopo é aplicado aos seis Solaris. O catálogo mantém as descrições, índices, códigos e ordem originais, sem juntar serviços de apartamentos diferentes.
+
+As etapas são: FUNDAÇÃO, MURO, PAVIMENTO TÉRREO, PAVIMENTO SUPERIOR, COBERTA, ÁREA DE LAZER e ACABAMENTOS. Escolha a obra, a etapa e o serviço. Os itens de AP 101, AP 102, AP 201 e AP 202 preenchem a unidade e o pavimento; detalhe o ambiente no campo Frente / unidade / local, se necessário. A busca também aceita o índice do item.
+
+Os registros do contrato 24 permanecem em Registros, identificados como histórico, com consulta pelos botões PDF. Seus percentuais, fotos e marcações ficam preservados. Uma nova inspeção usa o contrato 23 e não acumula medições do contrato anterior. O arquivo `solaris-contract-23.json` contém a referência das linhas da planilha para validação do catálogo; os critérios da FVS são propostas de campo, sujeitos aos projetos e procedimentos da obra.
 
 ## Render
 

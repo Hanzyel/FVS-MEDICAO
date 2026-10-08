@@ -1,0 +1,571 @@
+{
+  "number": "23",
+  "sourceFile": "Contrato Analítico - 23 - DIFELIX EMPREITEIRA LTDA.xlsx",
+  "sourceSheet": "Contrato Analítico",
+  "sourceWork": "Solaris Village IV",
+  "sourceSha256": "d81ff1ab3fe7bbc3537eb6b99c0059fd43b3c75c9f9a32fe1e2318d40cfaaaaf",
+  "stages": [
+    {
+      "index": "1",
+      "name": "FUNDAÇÃO",
+      "sourceCell": "G12"
+    },
+    {
+      "index": "2",
+      "name": "MURO",
+      "sourceCell": "G16"
+    },
+    {
+      "index": "3",
+      "name": "PAVIMENTO TÉRREO",
+      "sourceCell": "G19"
+    },
+    {
+      "index": "4",
+      "name": "PAVIMENTO SUPERIOR",
+      "sourceCell": "G43"
+    },
+    {
+      "index": "5",
+      "name": "COBERTA",
+      "sourceCell": "G68"
+    },
+    {
+      "index": "6",
+      "name": "ÁREA DE LAZER",
+      "sourceCell": "G71"
+    },
+    {
+      "index": "7",
+      "name": "ACABAMENTOS",
+      "sourceCell": "G76"
+    }
+  ],
+  "items": [
+    {
+      "index": "1.1",
+      "sourceCode": "#1.1",
+      "name": "RADIER COMPLETO - VB",
+      "sourceCell": "G13",
+      "stageIndex": "1"
+    },
+    {
+      "index": "1.2",
+      "sourceCode": "#1.2",
+      "name": "FOSSA / FILTRO / SUMIDOURO - VB",
+      "sourceCell": "G14",
+      "stageIndex": "1"
+    },
+    {
+      "index": "1.3",
+      "sourceCode": "#1.3",
+      "name": "CAIXAS DE INSPEÇÃO - VB",
+      "sourceCell": "G15",
+      "stageIndex": "1"
+    },
+    {
+      "index": "2.1",
+      "sourceCode": "#2.1",
+      "name": "ALVENARIA E FECHAMENTO DO MURO - VB",
+      "sourceCell": "G17",
+      "stageIndex": "2"
+    },
+    {
+      "index": "2.2",
+      "sourceCode": "#2.2",
+      "name": "REBOCO / ACABAMENTO DO MURO - VB",
+      "sourceCell": "G18",
+      "stageIndex": "2"
+    },
+    {
+      "index": "3.1",
+      "sourceCode": "#3.1",
+      "name": "ESTRUTURA / LAJE — AP 101 - VB",
+      "sourceCell": "G20",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.2",
+      "sourceCode": "#3.2",
+      "name": "ESTRUTURA / LAJE — AP 102 - VB",
+      "sourceCell": "G21",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.3",
+      "sourceCode": "#3.3",
+      "name": "ESCADA — COMUM - VB",
+      "sourceCell": "G22",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.4",
+      "sourceCode": "#3.4",
+      "name": "ALVENARIA — AP 101 - VB",
+      "sourceCell": "G23",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.5",
+      "sourceCode": "#3.5",
+      "name": "ALVENARIA — AP 102 - VB",
+      "sourceCell": "G24",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.6",
+      "sourceCode": "#3.6",
+      "name": "ELÉTRICA INFRA — AP 101 - VB",
+      "sourceCell": "G25",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.7",
+      "sourceCode": "#3.7",
+      "name": "ELÉTRICA INFRA — AP 102 - VB",
+      "sourceCell": "G26",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.8",
+      "sourceCode": "#3.8",
+      "name": "ELÉTRICA ACAB. — AP 101 - VB",
+      "sourceCell": "G27",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.9",
+      "sourceCode": "#3.9",
+      "name": "ELÉTRICA ACAB. — AP 102 - VB",
+      "sourceCell": "G28",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.10",
+      "sourceCode": "#3.10",
+      "name": "HIDROSSANITÁRIO — AP 101 - VB",
+      "sourceCell": "G29",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.11",
+      "sourceCode": "#3.11",
+      "name": "HIDROSSANITÁRIO — AP 102 - VB",
+      "sourceCell": "G30",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.12",
+      "sourceCode": "#3.12",
+      "name": "REBOCO INTERNO — AP 101 - VB",
+      "sourceCell": "G31",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.13",
+      "sourceCode": "#3.13",
+      "name": "REBOCO INTERNO — AP 102 - VB",
+      "sourceCell": "G32",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.14",
+      "sourceCode": "#3.14",
+      "name": "GESSO INTERNO — AP 101 - VB",
+      "sourceCell": "G33",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.15",
+      "sourceCode": "#3.15",
+      "name": "GESSO INTERNO — AP 102 - VB",
+      "sourceCell": "G34",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.16",
+      "sourceCode": "#3.16",
+      "name": "REBOCO EXTERNO — AP 101 - VB",
+      "sourceCell": "G35",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.17",
+      "sourceCode": "#3.17",
+      "name": "REBOCO EXTERNO — AP 102 - VB",
+      "sourceCell": "G36",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.18",
+      "sourceCode": "#3.18",
+      "name": "CONTRAPISO — AP 101 - VB",
+      "sourceCell": "G37",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.19",
+      "sourceCode": "#3.19",
+      "name": "CONTRAPISO — AP 102 - VB",
+      "sourceCell": "G38",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.20",
+      "sourceCode": "#3.20",
+      "name": "CERÂMICA — AP 101 - VB",
+      "sourceCell": "G39",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.21",
+      "sourceCode": "#3.21",
+      "name": "CERÂMICA — AP 102 - VB",
+      "sourceCell": "G40",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.22",
+      "sourceCode": "#3.22",
+      "name": "REJUNTE — AP 101 - VB",
+      "sourceCell": "G41",
+      "stageIndex": "3"
+    },
+    {
+      "index": "3.23",
+      "sourceCode": "#3.23",
+      "name": "REJUNTE — AP 102 - VB",
+      "sourceCell": "G42",
+      "stageIndex": "3"
+    },
+    {
+      "index": "4.1",
+      "sourceCode": "#4.1",
+      "name": "ESTRUTURA / LAJE — AP 201 - VB",
+      "sourceCell": "G44",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.2",
+      "sourceCode": "#4.2",
+      "name": "ESTRUTURA / LAJE — AP 202 - VB",
+      "sourceCell": "G45",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.3",
+      "sourceCode": "#4.3",
+      "name": "ALVENARIA — AP 201 - VB",
+      "sourceCell": "G46",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.4",
+      "sourceCode": "#4.4",
+      "name": "ALVENARIA — AP 202 - VB",
+      "sourceCell": "G47",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.5",
+      "sourceCode": "#4.5",
+      "name": "ELÉTRICA INFRA — AP 201 - VB",
+      "sourceCell": "G48",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.6",
+      "sourceCode": "#4.6",
+      "name": "ELÉTRICA INFRA — AP 202 - VB",
+      "sourceCell": "G49",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.7",
+      "sourceCode": "#4.7",
+      "name": "ELÉTRICA ACAB. — AP 201 - VB",
+      "sourceCell": "G50",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.8",
+      "sourceCode": "#4.8",
+      "name": "ELÉTRICA ACAB. — AP 202 - VB",
+      "sourceCell": "G51",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.9",
+      "sourceCode": "#4.9",
+      "name": "HIDROSSANITÁRIO — AP 201 - VB",
+      "sourceCell": "G52",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.10",
+      "sourceCode": "#4.10",
+      "name": "HIDROSSANITÁRIO — AP 202 - VB",
+      "sourceCell": "G53",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.11",
+      "sourceCode": "#4.11",
+      "name": "REBOCO INTERNO — AP 201 - VB",
+      "sourceCell": "G54",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.12",
+      "sourceCode": "#4.12",
+      "name": "REBOCO INTERNO — AP 202 - VB",
+      "sourceCell": "G55",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.13",
+      "sourceCode": "#4.13",
+      "name": "GESSO INTERNO — AP 201 - VB",
+      "sourceCell": "G56",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.14",
+      "sourceCode": "#4.14",
+      "name": "GESSO INTERNO — AP 202 - VB",
+      "sourceCell": "G57",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.15",
+      "sourceCode": "#4.15",
+      "name": "REBOCO EXTERNO — AP 201 - VB",
+      "sourceCell": "G58",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.16",
+      "sourceCode": "#4.16",
+      "name": "REBOCO EXTERNO — AP 202 - VB",
+      "sourceCell": "G59",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.17",
+      "sourceCode": "#4.17",
+      "name": "CONTRAPISO — AP 201 - VB",
+      "sourceCell": "G60",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.18",
+      "sourceCode": "#4.18",
+      "name": "CONTRAPISO — AP 202 - VB",
+      "sourceCell": "G61",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.19",
+      "sourceCode": "#4.19",
+      "name": "CERÂMICA — AP 201 - VB",
+      "sourceCell": "G62",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.20",
+      "sourceCode": "#4.20",
+      "name": "CERÂMICA — AP 202 - VB",
+      "sourceCell": "G63",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.21",
+      "sourceCode": "#4.21",
+      "name": "REJUNTE — AP 201 - VB",
+      "sourceCell": "G64",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.22",
+      "sourceCode": "#4.22",
+      "name": "REJUNTE — AP 202 - VB",
+      "sourceCell": "G65",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.23",
+      "sourceCode": "#4.23",
+      "name": "IMPERMEABILIZAÇÃO — AP 201 - VB",
+      "sourceCell": "G66",
+      "stageIndex": "4"
+    },
+    {
+      "index": "4.24",
+      "sourceCode": "#4.24",
+      "name": "IMPERMEABILIZAÇÃO — AP 202 - VB",
+      "sourceCell": "G67",
+      "stageIndex": "4"
+    },
+    {
+      "index": "5.1",
+      "sourceCode": "#5.1",
+      "name": "PLATIBANDA / BASE CAIXA D'ÁGUA - VB",
+      "sourceCell": "G69",
+      "stageIndex": "5"
+    },
+    {
+      "index": "5.2",
+      "sourceCode": "#5.2",
+      "name": "ESTRUTURA / TELHAMENTO / CHAPIM - VB",
+      "sourceCell": "G70",
+      "stageIndex": "5"
+    },
+    {
+      "index": "6.1",
+      "sourceCode": "#6.1",
+      "name": "CALÇADAS / PISOS EXTERNOS - VB",
+      "sourceCell": "G72",
+      "stageIndex": "6"
+    },
+    {
+      "index": "6.2",
+      "sourceCode": "#6.2",
+      "name": "CHURRASQUEIRA / BANCADA - VB",
+      "sourceCell": "G73",
+      "stageIndex": "6"
+    },
+    {
+      "index": "6.3",
+      "sourceCode": "#6.3",
+      "name": "PERGOLADO / DUCHA - VB",
+      "sourceCell": "G74",
+      "stageIndex": "6"
+    },
+    {
+      "index": "6.4",
+      "sourceCode": "#6.4",
+      "name": "ACABAMENTOS DA ÁREA DE LAZER - VB",
+      "sourceCell": "G75",
+      "stageIndex": "6"
+    },
+    {
+      "index": "7.1",
+      "sourceCode": "#7.1",
+      "name": "PINTURA — AP 101 - VB",
+      "sourceCell": "G77",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.2",
+      "sourceCode": "#7.2",
+      "name": "PINTURA — AP 102 - VB",
+      "sourceCell": "G78",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.3",
+      "sourceCode": "#7.3",
+      "name": "PINTURA — AP 201 - VB",
+      "sourceCell": "G79",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.4",
+      "sourceCode": "#7.4",
+      "name": "PINTURA — AP 202 - VB",
+      "sourceCell": "G80",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.5",
+      "sourceCode": "#7.5",
+      "name": "LOUÇAS / METAIS — AP 101 - VB",
+      "sourceCell": "G81",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.6",
+      "sourceCode": "#7.6",
+      "name": "LOUÇAS / METAIS — AP 102 - VB",
+      "sourceCell": "G82",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.7",
+      "sourceCode": "#7.7",
+      "name": "LOUÇAS / METAIS — AP 201 - VB",
+      "sourceCell": "G83",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.8",
+      "sourceCode": "#7.8",
+      "name": "LOUÇAS / METAIS — AP 202 - VB",
+      "sourceCell": "G84",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.9",
+      "sourceCode": "#7.9",
+      "name": "BANCADAS / PEITORIS — AP 101 - VB",
+      "sourceCell": "G85",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.10",
+      "sourceCode": "#7.10",
+      "name": "BANCADAS / PEITORIS — AP 102 - VB",
+      "sourceCell": "G86",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.11",
+      "sourceCode": "#7.11",
+      "name": "BANCADAS / PEITORIS — AP 201 - VB",
+      "sourceCell": "G87",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.12",
+      "sourceCode": "#7.12",
+      "name": "BANCADAS / PEITORIS — AP 202 - VB",
+      "sourceCell": "G88",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.13",
+      "sourceCode": "#7.13",
+      "name": "LIMPEZA / ENTREGA — AP 101 - VB",
+      "sourceCell": "G89",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.14",
+      "sourceCode": "#7.14",
+      "name": "LIMPEZA / ENTREGA — AP 102 - VB",
+      "sourceCell": "G90",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.15",
+      "sourceCode": "#7.15",
+      "name": "LIMPEZA / ENTREGA — AP 201 - VB",
+      "sourceCell": "G91",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.16",
+      "sourceCode": "#7.16",
+      "name": "LIMPEZA / ENTREGA — AP 202 - VB",
+      "sourceCell": "G92",
+      "stageIndex": "7"
+    },
+    {
+      "index": "7.17",
+      "sourceCode": "#7.17",
+      "name": "INSTALAÇÃO DE PORTAS - VB",
+      "sourceCell": "G93",
+      "stageIndex": "7"
+    }
+  ]
+}
