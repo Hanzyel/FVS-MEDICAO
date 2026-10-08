@@ -1,7 +1,9 @@
 (()=>{
   'use strict';
 
-  const LOCAL_VERSION = '1.7.12';
+  const LOCAL_VERSION = '4.0.1';
+  const APP_BASE = new URL('./', location.href);
+  const appUrl = name => new URL(name, APP_BASE).href;
   const UPDATE_INTERVAL_MS = 15 * 60 * 1000;
   const $ = id => document.getElementById(id);
 
@@ -50,7 +52,7 @@
 
   async function validateManifest(){
     try{
-      const r = await fetch('/manifest.webmanifest?t=' + Date.now(), { cache:'no-store' });
+      const r = await fetch(appUrl('manifest.webmanifest') + '?t=' + Date.now(), { cache:'no-store' });
       if (!r.ok) throw new Error('manifest ' + r.status);
       const m = await r.json();
       const sizes = (m.icons || []).map(i => i.sizes);
@@ -63,7 +65,7 @@
         m.prefer_related_applications !== true
       );
       if (!manifestReady) return false;
-      const iconUrls = ['/icons/icon-192.png','/icons/icon-512.png'];
+      const iconUrls = ['icons/icon-192.png','icons/icon-512.png'].map(appUrl);
       const rs = await Promise.all(iconUrls.map(u => fetch(u, { cache:'no-store' })));
       assetsReady = rs.every(x => x.ok);
       return assetsReady;
@@ -83,7 +85,7 @@
       return;
     }
     if (!secure()){
-      status.innerHTML = '<b>HTTPS obrigatório.</b> Abra o endereço <code>https://…onrender.com</code> diretamente no Chrome. Arquivos <code>content://</code> e HTML aberto pelo WhatsApp não podem ser instalados como PWA.';
+      status.innerHTML = '<b>HTTPS obrigatório.</b> Abra o endereço <code>HTTPS do seu site</code> diretamente no Chrome. Arquivos <code>content://</code> e HTML aberto pelo WhatsApp não podem ser instalados como PWA.';
       setNative(false,'HTTPS necessário');
       return;
     }
@@ -170,7 +172,7 @@
 
   async function checkRemoteVersion(reg){
     try{
-      const response = await fetch('/version.json?t=' + Date.now(), { cache:'no-store' });
+      const response = await fetch(appUrl('version.json') + '?t=' + Date.now(), { cache:'no-store' });
       if (!response.ok) throw new Error('version.json ' + response.status);
       const remote = await response.json();
       if (remote?.version && remote.version !== LOCAL_VERSION){
@@ -198,8 +200,8 @@
   async function registerSW(){
     if (!('serviceWorker' in navigator)){ refreshStatus(); return; }
     try{
-      const reg = await navigator.serviceWorker.register('/sw.js', {
-        scope:'/',
+      const reg = await navigator.serviceWorker.register(appUrl('sw.js'), {
+        scope:APP_BASE.pathname,
         updateViaCache:'none'
       });
       registration = reg;
@@ -227,6 +229,8 @@
   updateNow?.addEventListener('click', () => {
     const worker = waitingWorker || registration?.waiting;
     if (!worker) return;
+    document.dispatchEvent(new Event('visibilitychange'));
+    window.dispatchEvent(new Event('pagehide'));
     updateRequested = true;
     updateNow.disabled = true;
     updateNow.textContent = 'Atualizando…';
@@ -239,8 +243,7 @@
   });
   setInterval(checkForUpdates, UPDATE_INTERVAL_MS);
 
-  validateManifest().finally(refreshStatus);
-  registerSW();
+  if(secure()){validateManifest().finally(refreshStatus);registerSW();}else refreshStatus();
   setInterval(() => { if (sheet?.classList.contains('show') && !installPrompt) refreshStatus(); }, 1000);
   setTimeout(refreshStatus, 31000);
 })();

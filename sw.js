@@ -1,10 +1,12 @@
-const VERSION = '1.7.12';
+const VERSION = '4.0.1';
 const CACHE_NAME = `elevatta-fvs-med-${VERSION}`;
 const OWN_CACHE_PREFIXES = ['elevatta-fvs-med-', 'elevatta-fvs-shell-'];
-const INDEX_URL = '/index.html';
+const BASE_PATH = new URL(self.registration.scope).pathname;
+const assetUrl = name => new URL(name.replace(/^\//,''), self.registration.scope).href;
+const INDEX_URL = assetUrl('index.html');
 const APP_SHELL = [
   '/',
-  INDEX_URL,
+  '/index.html',
   '/config.js',
   '/pwa.js',
   '/manifest.webmanifest',
@@ -13,7 +15,7 @@ const APP_SHELL = [
   '/icons/icon-maskable-512.png',
   '/icons/apple-touch-icon.png',
   '/icons/favicon-32.png'
-];
+].map(assetUrl);
 
 function isApiRequest(url) {
   return (
@@ -73,7 +75,7 @@ self.addEventListener('install', event => {
   // Não ativa automaticamente. A nova versão fica waiting até o usuário confirmar.
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE_NAME);
-    await Promise.allSettled(
+    await Promise.all(
       APP_SHELL.map(url => cache.add(new Request(url, { cache: 'reload' })))
     );
   })());
@@ -110,7 +112,8 @@ self.addEventListener('fetch', event => {
   }
 
   // O SW só gerencia recursos da própria origem.
-  if (url.origin !== self.location.origin) return;
+  if (url.origin !== self.location.origin || !url.pathname.startsWith(BASE_PATH)) return;
+  url.pathname = '/' + url.pathname.slice(BASE_PATH.length);
 
   // Arquivos que controlam versão devem sempre vir da rede.
   if (isVersionControlRequest(url)) {
@@ -119,7 +122,7 @@ self.addEventListener('fetch', event => {
   }
 
   // Navegação/HTML: Network First, com shell offline como fallback.
-  if (request.mode === 'navigate' || url.pathname === '/' || url.pathname === INDEX_URL) {
+  if (request.mode === 'navigate' || url.pathname === '/' || url.pathname === '/index.html') {
     event.respondWith(networkFirst(request, INDEX_URL));
     return;
   }

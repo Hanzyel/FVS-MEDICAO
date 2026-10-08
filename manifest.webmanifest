@@ -1,18 +1,18 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "Elevatta FVS + Medição",
   "short_name": "Elevatta FVS",
-  "description": "Controle de qualidade, FVS, medição física e evidências de obra.",
+  "description": "FVS e medição das obras Lótus 2 e Solaris 1 a 6, com preenchimento por serviço e uso offline.",
   "lang": "pt-BR",
   "dir": "ltr",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "display_override": [
     "standalone",
     "minimal-ui"
   ],
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "background_color": "#F4F7FB",
   "theme_color": "#17365F",
   "prefer_related_applications": false,
@@ -22,19 +22,19 @@
   ],
   "icons": [
     {
-      "src": "/icons/icon-192.png",
+      "src": "icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-512.png",
+      "src": "icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-maskable-512.png",
+      "src": "icons/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
