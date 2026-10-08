@@ -15,3 +15,5 @@ Executada em 08/10/2026 no Google Chrome, com contexto desktop e emulação Pixe
 - Validação do pacote: versões, sintaxe, PWA, ícones, sete obras e 608 combinações de obra/serviço.
 
 As verificações da FVS são propostas para uso em campo. A planilha define serviços e etapas, sem especificar tolerâncias ou critérios técnicos de aceitação. A emulação verifica layout e fluxo; esta atualização não altera os módulos de câmera e movimentação das marcações validados nas versões 4.0.2 e 4.0.3.
+
+Também validada a recuperação de uma ficha sem serviço selecionado, com etapa/grupo do contrato 24: a nova ficha limpa as seleções incompatíveis, mantém a obra e o responsável e solicita uma das etapas do contrato 23.
