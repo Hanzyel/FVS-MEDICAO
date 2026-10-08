@@ -18,7 +18,25 @@ try{
  const catalogLine=index.split(String.fromCharCode(10)).find(line=>line.startsWith("const CATALOGS="));
  const catalogs=JSON.parse(catalogLine.trim().slice("const CATALOGS=".length,-1));
  assert(catalogs.lotus.items.length===158,'Escopo Lótus incompleto');
- assert(catalogs.solaris.items.length===28,'Escopo DIFELIX incompleto');
+ const solaris=catalogs.solaris;
+ if(solaris.number==='24'){
+  assert(solaris.items.length===28&&solaris.stages.length===9,'Escopo anterior DIFELIX incompleto');
+ }else{
+  assert(solaris.number==='23','Contrato Solaris desconhecido');
+  const source=JSON.parse(read('solaris-contract-23.json'));
+  assert(solaris.items.length===75&&solaris.stages.length===7,'Contrato 23 incompleto');
+  assert(solaris.sourceFile===source.sourceFile&&solaris.sourceSheet===source.sourceSheet&&solaris.sourceSha256===source.sourceSha256,'Fonte do contrato 23 divergente');
+  assert(JSON.stringify(solaris.stages)===JSON.stringify(source.stages),'Etapas divergentes da planilha');
+  assert(JSON.stringify(solaris.phases.map(p=>p.name))===JSON.stringify(source.stages.map(s=>s.name)),'Etapas do seletor divergentes');
+  assert(new Set(solaris.items.map(s=>s.code)).size===75,'Serviços duplicados');
+  for(const [i,s] of solaris.items.entries()){
+   const ref=source.items[i];
+   assert(['index','sourceCode','name','sourceCell','stageIndex'].every(k=>s[k]===ref[k]),`Serviço divergente da planilha: ${s.code}`);
+   assert(s.code===`DFX-23-${ref.index}`,'Identificador mistura contratos');
+   assert(s.stage===`${ref.stageIndex} · ${source.stages.find(st=>st.index===ref.stageIndex).name}`,'Etapa do serviço incorreta');
+   assert(solaris.phases.some(p=>p.id===s.phaseId)&&solaris.groups.some(g=>g.id===s.groupId&&g.phaseId===s.phaseId),'Serviço sem etapa no seletor');
+  }
+ }
  for(const c of Object.values(catalogs))for(const s of c.items)assert(s.checks?.length>0,`FVS ausente: ${s.code}`);
 
  const workLine=index.split(String.fromCharCode(10)).find(line=>line.startsWith("const FALLBACK_OBRAS="));
@@ -34,5 +52,5 @@ try{
  assert(sw.includes("url.pathname.startsWith('/api/')")&&sw.includes("url.pathname === '/healthz'"),'Exclusão API ausente');
  assert(sw.includes("event.data?.type === 'SKIP_WAITING'"),'Atualização controlada ausente');
  assert(read('render.yaml').includes('buildCommand: node scripts/check.mjs'),'Render sem validação');
- console.log(`Pacote ${APP_ID} válido: arquivos, versões, PWA, ícones, 7 obras e 326 combinações de serviço/FVS.`);
+ console.log(`Pacote ${APP_ID} válido: arquivos, versões, PWA, ícones, 7 obras e ${catalogs.lotus.items.length+solaris.items.length*6} combinações de serviço/FVS. Solaris: contrato ${solaris.number}, ${solaris.items.length} serviços, ${solaris.stages.length} etapas.`);
 }catch(e){console.error(`Pacote inválido: ${e.message}`);process.exit(1)}
