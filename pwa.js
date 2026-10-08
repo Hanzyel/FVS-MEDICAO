@@ -1,7 +1,7 @@
 (()=>{
   'use strict';
 
-  const LOCAL_VERSION = '4.0.2';
+  const LOCAL_VERSION = '4.0.3';
   const APP_BASE = new URL('./', location.href);
   const appUrl = name => new URL(name, APP_BASE).href;
   const UPDATE_INTERVAL_MS = 15 * 60 * 1000;

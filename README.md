@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição — Lótus e Solaris
 
-Versão 4.0.2. Pacote completo para GitHub e Render, com arquivos na raiz.
+Versão 4.0.3. Pacote completo para GitHub e Render, com arquivos na raiz.
 
 ## Atualizar o GitHub
 
@@ -36,10 +36,12 @@ Sem API disponível, o formulário, rascunhos, fotos e exportações funcionam n
 
 ## Validação
 
-Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_2.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
+Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_3.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
 
 ## Fotos e marcações
 
 Na etapa Fotos, toque em **Câmera**, permita o acesso no Chrome e use **Tirar foto** quantas vezes precisar. **Concluir** fecha a câmera e mantém as fotos no registro. **Trocar câmera** alterna traseira/frontal. A **Galeria** aceita várias fotos de uma vez. **Câmera do aparelho** é uma alternativa para navegadores sem câmera ao vivo.
 
 Em cada imagem, toque em **Editar foto**. Escolha **Seta** ou **Círculo**, arraste sobre a foto e toque em **Salvar**. As marcações aparecem na galeria, no PDF e no Excel. O original é preservado e as marcações podem ser desfeitas.
+
+**Mover marcações:** depois de desenhar ou reabrir uma foto, escolha **Mover**, toque no círculo (borda ou centro) ou na seta e arraste. A seleção aparece com contorno azul. **Desfazer** reverte movimentos, desenhos, exclusões e limpeza. **Excluir marcação** remove apenas o elemento selecionado. No PC, as teclas de direção também permitem ajustar a posição. **Salvar** mantém as novas posições para a próxima abertura e para os relatórios.
