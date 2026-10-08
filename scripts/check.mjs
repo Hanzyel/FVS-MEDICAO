@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
-const VERSION='4.0.1', APP_ID=`FVS-UNIFICADO-${VERSION}`;
+const VERSION=JSON.parse(fs.readFileSync('package.json','utf8')).version, APP_ID=`FVS-UNIFICADO-${VERSION}`;
 const read=name=>fs.readFileSync(path.join(process.cwd(),name),'utf8');
 const assert=(ok,msg)=>{if(!ok)throw new Error(msg)};
 try{
