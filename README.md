@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição — Lótus e Solaris
 
-Versão 4.0.7. Pacote completo para GitHub e Render, com arquivos na raiz.
+Versão 4.0.8. Pacote completo para GitHub e Render, com arquivos na raiz.
 
 ## Atualizar o GitHub
 
@@ -44,7 +44,7 @@ Sem API disponível, o formulário, rascunhos, fotos e exportações funcionam n
 
 ## Validação
 
-Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_7.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
+Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_8.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
 
 ## Fotos e marcações
 
@@ -61,3 +61,7 @@ Informe o **Executado neste período** digitando ou arrastando a barra. **Aprova
 ## Nome dos arquivos exportados
 
 PDF usa `OBRA_EMPREITEIRO_SERVICO_DATA`, por exemplo `S2_DIFELIX_PINTURA_AP_101_VB_09102026.pdf`. O empreiteiro é DIFELIX, conforme solicitado, independentemente do responsável/inspetor. Excel mantém o nome com responsável/inspetor. OBRA corresponde a S1 a S6 ou L2; SERVICO vem do serviço selecionado; DATA é a data da inspeção em DDMMAAAA. Letras ficam maiúsculas, sem acentos, e espaços/símbolos são convertidos em sublinhados. A exportação pelo histórico usa obra, serviço e data do registro original.
+
+## Responsáveis no PDF
+
+O resumo e as assinaturas distinguem **Executado pela empreiteira: DIFELIX** de **Conferido por: Ricardo Cavalcante**. Ricardo Cavalcante é o responsável/inspetor inicial de novas fichas e de rascunhos sem nome; o campo continua editável. Registros com outro inspetor informado mantêm esse nome. O coordenador, se preenchido, aparece nas informações complementares. Os nomes nas assinaturas ficam maiores e em negrito.
