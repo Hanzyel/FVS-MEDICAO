@@ -1,6 +1,6 @@
 # Elevatta FVS + Medição — Lótus e Solaris
 
-Versão 4.0.5. Pacote completo para GitHub e Render, com arquivos na raiz.
+Versão 4.0.6. Pacote completo para GitHub e Render, com arquivos na raiz.
 
 ## Atualizar o GitHub
 
@@ -44,7 +44,7 @@ Sem API disponível, o formulário, rascunhos, fotos e exportações funcionam n
 
 ## Validação
 
-Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_4.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
+Execute `node scripts/check.mjs` na raiz. Veja `TEST_REPORT_4_0_6.md`. Arquivos com versão 1.7.x documentam apenas o histórico do pacote de origem.
 
 ## Fotos e marcações
 
@@ -57,3 +57,7 @@ Em cada imagem, toque em **Editar foto**. Escolha **Seta** ou **Círculo**, arra
 ## Aprovar a medição
 
 Informe o **Executado neste período** digitando ou arrastando a barra. **Aprovar e medir** confirma o executado como aprovado e medido em um único toque. **Aprovar parcialmente** permite escolher um valor menor e confirmá-lo; **Deixar pendente** mantém o executado sem aprovação. O resumo mostra anterior, esta medição e acumulado. Se precisar registrar menos que o aprovado, abra **Medir um valor diferente do aprovado**. Aprovações nunca são preenchidas automaticamente ao apenas editar o executado. As validações e o histórico separado por serviço/frente continuam preservados.
+
+## Nome dos arquivos exportados
+
+PDF e Excel usam `OBRA_QUEMFEZ_SERVICO_DATA`, por exemplo `S2_BRUNO_PINTURA_AP_101_VB_09102026.pdf`. OBRA corresponde a S1 a S6 ou L2; QUEMFEZ vem de Responsável / inspetor; SERVICO vem do serviço selecionado; DATA é a data da inspeção em DDMMAAAA. Letras ficam maiúsculas, sem acentos, e espaços/símbolos são convertidos em sublinhados. A regra também usa os dados originais ao exportar pelo histórico.
