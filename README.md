@@ -65,3 +65,16 @@ PDF usa `OBRA_EMPREITEIRO_SERVICO_DATA`, por exemplo `S2_DIFELIX_PINTURA_AP_101_
 ## Responsáveis no PDF
 
 O resumo e as assinaturas distinguem **Executado pela empreiteira: DIFELIX** de **Conferido por: Ricardo Cavalcante**. Ricardo Cavalcante é o responsável/inspetor inicial de novas fichas e de rascunhos sem nome; o campo continua editável. Registros com outro inspetor informado mantêm esse nome. O coordenador, se preenchido, aparece nas informações complementares. Os nomes nas assinaturas ficam maiores e em negrito.
+
+
+## Planta e fotos — versão 4.1.0
+
+Abra a aba **Planta e fotos**, escolha a obra, o apartamento e o ambiente. No Solaris 1, toque no ponto da planta; use os botões + / − ou o gesto de pinça para ampliar. Registre várias fotos com a câmera aberta ou selecione imagens da galeria. Cada foto mantém o local original, mesmo depois de trocar a seleção.
+
+Em **Criar FVS deste ambiente**, escolha a etapa e o serviço do contrato. O app preserva a FVS anterior e copia as fotos para uma nova ficha, sem aprovar ou medir automaticamente. A frente do contrato é mantida; o cômodo aparece nas evidências.
+
+**Backup e integração com o ObraMap** aceita o JSON exportado pelo ObraMap Solaris Village I e pelo próprio módulo. A importação não substitui fotos existentes. Guarde o backup fora do navegador. As fotos deste módulo permanecem no dispositivo; não há sincronização automática com outros aparelhos.
+
+A planta e as 28 etiquetas QR pertencem exclusivamente ao Solaris 1. Solaris 2 a 6 e Lótus 2 permitem identificação manual, sem usar uma planta de outra obra. A leitura QR por câmera usa o recurso disponível no navegador; o código impresso também pode ser digitado.
+
+Publique **todo o conteúdo deste pacote**, incluindo vendor-pdf.js, vendor-xlsx.js, field.css, as duas plantas WebP e etiquetas-solaris-1.html. Depois do primeiro acesso online e da preparação do cache, essas funções também ficam disponíveis offline.

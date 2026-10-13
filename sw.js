@@ -1,4 +1,4 @@
-const VERSION = '4.0.8';
+const VERSION = '4.1.0';
 const CACHE_NAME = `elevatta-fvs-med-${VERSION}`;
 const OWN_CACHE_PREFIXES = ['elevatta-fvs-med-', 'elevatta-fvs-shell-'];
 const BASE_PATH = new URL(self.registration.scope).pathname;
@@ -7,6 +7,12 @@ const INDEX_URL = assetUrl('index.html');
 const APP_SHELL = [
   '/',
   '/index.html',
+  '/field.css',
+  '/vendor-pdf.js',
+  '/vendor-xlsx.js',
+  '/planta-s1-terreo.webp',
+  '/planta-s1-superior.webp',
+  '/etiquetas-solaris-1.html',
   '/config.js',
   '/pwa.js',
   '/manifest.webmanifest',
@@ -134,7 +140,7 @@ self.addEventListener('fetch', event => {
   }
 
   // Ícones são estáticos: Cache First.
-  if (isIconRequest(url)) {
+  if (isIconRequest(url) || /^\/(vendor-(pdf|xlsx)\.js|field\.css|planta-s1-(terreo|superior)\.webp|etiquetas-solaris-1\.html)$/.test(url.pathname)) {
     event.respondWith(cacheFirst(request));
   }
 });

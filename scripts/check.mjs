@@ -7,6 +7,13 @@ const assert=(ok,msg)=>{if(!ok)throw new Error(msg)};
 try{
  for(const name of ['index.html','config.js','pwa.js','sw.js','version.json','manifest.webmanifest','render.yaml','package.json','scripts/check.mjs','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-512.png','icons/apple-touch-icon.png','icons/favicon-32.png'])assert(fs.existsSync(name),`Arquivo ausente: ${name}`);
  const index=read('index.html'),pwa=read('pwa.js'),sw=read('sw.js');
+ for(const name of ['field.css','vendor-pdf.js','vendor-xlsx.js','planta-s1-terreo.webp','planta-s1-superior.webp','etiquetas-solaris-1.html']){
+  assert(fs.existsSync(name),`Integração incompleta: ${name}`);
+  assert(sw.includes(`'/${name}'`),`Recurso offline ausente: ${name}`);
+ }
+ for(const name of ['vendor-pdf.js','vendor-xlsx.js'])new vm.Script(read(name),{filename:name});
+ assert(index.includes('id="viewField"')&&index.includes('function fieldConfirmLink('),'Integração ObraMap ausente');
+ assert(!index.match(/id="engine-(pdf|xlsx)">\S/),'Exportador deve ser carregado sob demanda');
  assert(JSON.parse(read('version.json')).version===VERSION,'Versão JSON divergente');
  assert(JSON.parse(read('version.json')).app===APP_ID,'Identificador divergente');
  assert(JSON.parse(read('package.json')).version===VERSION,'Versão package divergente');
